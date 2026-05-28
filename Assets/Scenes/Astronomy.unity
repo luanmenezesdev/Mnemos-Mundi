@@ -20071,9 +20071,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa829d33e6ac51f4f8f8fc71f0e10cf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PortalInteraction
-  portalName: Idiomas
-  portalState: 1
-  targetSceneName: 
+  portalName: Lobby
+  portalState: 0
+  targetSceneName: Lobby
   playerTag: Player
   promptPanel: {fileID: 246217275}
   promptText: {fileID: 2019385534}
