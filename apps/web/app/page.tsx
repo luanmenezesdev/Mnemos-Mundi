@@ -10,7 +10,7 @@ import { SectionEight } from "@/components/sections/section-eight";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-background text-foreground">
       <section
         aria-label="Hero"
         className="relative min-h-[100svh] overflow-hidden bg-background text-foreground"

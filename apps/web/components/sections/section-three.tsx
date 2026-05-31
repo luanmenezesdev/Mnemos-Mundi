@@ -44,7 +44,7 @@ export function SectionThree({ className }: SectionThreeProps) {
     <section
       aria-label="Sessao 3 - Estrutural"
       className={[
-        "relative h-[100svh] max-h-[100svh] overflow-hidden bg-background text-foreground",
+        "relative min-h-[100svh] overflow-hidden bg-background text-foreground",
         className,
       ]
         .filter(Boolean)

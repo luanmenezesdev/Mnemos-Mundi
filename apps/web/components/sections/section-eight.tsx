@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type SectionEightProps = {
   className?: string;
 };
@@ -7,7 +9,7 @@ export function SectionEight({ className }: SectionEightProps) {
     <section
       aria-label="Sessao 8"
       className={[
-        "relative min-h-[100svh] overflow-x-hidden bg-background text-foreground lg:h-[100svh] lg:overflow-hidden",
+        "relative min-h-[100svh] overflow-x-hidden bg-background text-foreground",
         className,
       ]
         .filter(Boolean)
@@ -225,7 +227,10 @@ export function SectionEight({ className }: SectionEightProps) {
               <div className="flex w-full max-w-[980px] shrink-0 flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-5 lg:gap-6">
 
                 {/* PRIMARY CTA */}
-                <button className="group relative flex h-[80px] w-full max-w-[500px] shrink-0 items-center gap-4 overflow-hidden rounded-[22px] border border-[#35d6ff]/50 bg-[#101624]/80 px-5 backdrop-blur-[12px] transition-all duration-300 hover:scale-[1.015] sm:h-[88px] sm:gap-5 sm:rounded-[26px] sm:px-6 lg:h-[92px] lg:rounded-[28px] lg:px-7">
+                <Link
+                  href="/mnemos-mundi"
+                  className="group relative flex h-[80px] w-full max-w-[500px] shrink-0 cursor-pointer items-center gap-4 overflow-hidden rounded-[22px] border border-[#35d6ff]/50 bg-[#101624]/80 px-5 backdrop-blur-[12px] transition-all duration-300 hover:scale-[1.015] sm:h-[88px] sm:gap-5 sm:rounded-[26px] sm:px-6 lg:h-[92px] lg:rounded-[28px] lg:px-7"
+                >
                   {/* GLOW */}
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(53,214,255,0.22),transparent_72%)]" />
                   {/* BORDER GLOW */}
@@ -239,13 +244,13 @@ export function SectionEight({ className }: SectionEightProps) {
                   {/* TEXT GROUP */}
                   <div className="relative z-10 flex flex-col items-start">
                     <span className="font-heading text-[length:var(--text-body-lg)] leading-none font-semibold tracking-[-0.03em] text-text-primary lg:text-[length:var(--text-h4)]">
-                      Entrar no Mnenus
+                      Entrar no Mnemos
                     </span>
                     <span className="mt-1.5 text-[length:var(--text-body)] leading-none font-normal text-text-secondary sm:mt-2">
-                      Ver demonstração do protótipo
+                      Abrir a página do player
                     </span>
                   </div>
-                </button>
+                </Link>
 
                 {/* SECONDARY CTA */}
                 <button className="group relative flex h-[72px] w-full max-w-[360px] shrink-0 items-center gap-4 overflow-hidden rounded-[22px] border border-[#b56cff]/40 bg-[#101624]/80 px-5 backdrop-blur-[12px] transition-all duration-300 hover:scale-[1.015] sm:h-[88px] sm:gap-5 sm:rounded-[26px] sm:px-6 lg:h-[92px] lg:rounded-[28px] lg:px-7">
