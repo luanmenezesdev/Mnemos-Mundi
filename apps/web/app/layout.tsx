@@ -20,6 +20,11 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: "Mnemos Mundi",
   description: "Mnemos Mundi web application",
+  icons: {
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
 };
 
 export default function RootLayout({

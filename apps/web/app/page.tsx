@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SectionFive } from "../components/sections/section-five";
 import { SectionFour } from "../components/sections/section-four";
 import { SectionThree } from "../components/sections/section-three";
@@ -110,15 +111,15 @@ export default function Home() {
                 </div>
 
                 <div className="mt-8 sm:mt-10 lg:mt-14">
-                  <button
-                    type="button"
-                    className="inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-full border border-[#50b4ff] bg-white/[0.08] px-5 py-3 text-[length:var(--text-body)] font-semibold text-text-primary shadow-[0_0_40px_rgba(80,180,255,0.22)] backdrop-blur-xl transition-colors hover:bg-white/[0.12] sm:min-h-[60px] sm:w-auto"
+                  <Link
+                    href="/mnemos-mundi"
+                    className="inline-flex min-h-14 w-full cursor-pointer items-center justify-center gap-3 rounded-full border border-[#50b4ff] bg-white/[0.08] px-5 py-3 text-[length:var(--text-body)] font-semibold text-text-primary shadow-[0_0_40px_rgba(80,180,255,0.22)] backdrop-blur-xl transition-colors hover:bg-white/[0.12] sm:min-h-[60px] sm:w-auto"
                   >
                     <span className="inline-flex h-[38px] w-[38px] items-center justify-center rounded-full border border-[#69e6ff] bg-[#071421] shadow-[0_0_20px_rgba(105,230,255,0.35)]" />
                     <span className="font-heading text-[length:var(--text-body)] sm:text-[length:var(--text-body-lg)]">
                       Entrar no Mnemos Mundi
                     </span>
-                  </button>
+                  </Link>
                 </div>
               </article>
             </div>

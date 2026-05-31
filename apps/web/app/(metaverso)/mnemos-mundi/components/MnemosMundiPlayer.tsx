@@ -37,6 +37,19 @@ const UNITY_BUILD_BASE = "/unity/Build";
 const UNITY_LOADER_SRC = `${UNITY_BUILD_BASE}/unity.loader.js`;
 let unityLoaderPromise: Promise<void> | null = null;
 
+function suppressWindowAlert() {
+  if (typeof window === "undefined") {
+    return () => undefined;
+  }
+
+  const originalAlert = window.alert;
+  window.alert = () => undefined;
+
+  return () => {
+    window.alert = originalAlert;
+  };
+}
+
 function loadUnityLoader() {
   if (typeof window === "undefined") {
     return Promise.reject(new Error("Unity loader can only run in the browser."));
@@ -100,8 +113,10 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
   React.useEffect(() => {
     let cancelled = false;
     const canvas = canvasRef.current;
+    const restoreAlert = suppressWindowAlert();
 
     if (!canvas) {
+      restoreAlert();
       return undefined;
     }
 
@@ -177,6 +192,7 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
 
       const instance = unityInstanceRef.current;
       unityInstanceRef.current = null;
+      restoreAlert();
 
       if (instance) {
         void instance.Quit();
