@@ -12,7 +12,7 @@ export function ProblemHeadline({
   return (
     <h2
       className={[
-        "font-[var(--font-space-grotesk)] text-5xl leading-[0.95] font-light tracking-[-0.046em] text-[#f8fafc] sm:text-6xl lg:text-[82px]",
+        "font-heading text-[length:var(--text-mobile-h2)] leading-[0.92] font-light tracking-[-0.046em] text-text-primary sm:text-[length:var(--text-mobile-h1)] lg:text-[length:var(--text-h1)]",
         className,
       ]
         .filter(Boolean)

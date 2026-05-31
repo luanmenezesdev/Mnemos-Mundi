@@ -8,8 +8,7 @@ export function ProblemStatsPanel({ className }: ProblemStatsPanelProps) {
   return (
     <div
       className={[
-        "w-full max-w-[520px] bg-[#050816]",
-        "flex min-h-[720px] flex-col",
+        "flex w-full max-w-[28rem] flex-col gap-4 bg-background",
         className,
       ]
         .filter(Boolean)
@@ -19,16 +18,14 @@ export function ProblemStatsPanel({ className }: ProblemStatsPanelProps) {
         value="9,6M"
         description="de jovens abandonam a escola por ano no Brasil."
         source="Fonte: IBGE (2023)"
-        showDivider
-        className="min-h-[204px] pt-12 pb-9"
+        className="rounded-xl border border-white/10 p-4 sm:p-5"
       />
 
       <ProblemStatCard
         value="75%"
         description="nao aplicam o que aprendem porque o conteudo nao se conecta com a vida real."
         source="Fonte: McKinsey (2023)"
-        showDivider
-        className="min-h-[204px] pt-10 pb-9"
+        className="rounded-xl border border-white/10 p-4 sm:p-5"
       />
 
       <ProblemStatCard
@@ -42,7 +39,7 @@ export function ProblemStatsPanel({ className }: ProblemStatsPanelProps) {
         description="Nunca tivemos tanto acesso ao conhecimento e nunca estivemos tao desconectados dele."
         source="Fonte: World Economic Forum (2024)"
         valueSize="md"
-        className="min-h-[220px] pt-11 pb-10"
+        className="rounded-xl border border-white/10 p-4 sm:p-5"
       />
     </div>
   );

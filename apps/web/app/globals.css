@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #102033;
+  --background: #050816;
+  --foreground: #f8fafc;
+  --color-background-elevated: #0b1220;
+  --color-background-panel: #101624;
   --color-blue-900: #163b73;
   --color-cyan-400: #5bc0eb;
   --color-gold-400: #f4c95d;
@@ -10,17 +12,17 @@
   --color-mint-400: #7bd389;
   --color-purple-400: #9d7dff;
   --color-slate-800: #1f2937;
-  --color-soft-blue: #eef7ff;
+  --color-soft-blue: #0d1628;
   --color-white: #f8fafc;
   --border-glow: #5bc0eb59;
-  --border-soft: #163b731f;
+  --border-soft: #8eb9ff24;
   --danger-soft: #ef6461;
-  --surface-glass: #ffffffb8;
-  --surface-blue-glass: #5bc0eb1f;
-  --surface-purple-glass: #9d7dff1a;
-  --text-primary: #102033;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
+  --surface-glass: #101624cc;
+  --surface-blue-glass: #5bc0eb14;
+  --surface-purple-glass: #9d7dff14;
+  --text-primary: #f8fafc;
+  --text-secondary: #d9e2ec;
+  --text-muted: #8aa4c0;
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
@@ -35,18 +37,25 @@
   --space-3xl: 64px;
   --space-4xl: 96px;
   --space-5xl: 128px;
-  --text-caption: 12px;
-  --text-body-sm: 14px;
-  --text-body: 16px;
-  --text-body-lg: 20px;
-  --text-h4: 22px;
-  --text-h3: 28px;
-  --text-mobile-h2: 30px;
-  --text-mobile-h1: 36px;
-  --text-mobile-hero: 40px;
-  --text-h2: 40px;
-  --text-h1: 56px;
-  --text-display: 64px;
+  --text-caption: clamp(0.75rem, 0.72rem + 0.12vw, 0.8125rem);
+  --text-eyebrow: clamp(0.8125rem, 0.76rem + 0.22vw, 0.9375rem);
+  --text-body-sm: clamp(0.875rem, 0.84rem + 0.16vw, 0.9375rem);
+  --text-body: clamp(1rem, 0.96rem + 0.18vw, 1.0625rem);
+  --text-body-lg: clamp(1.0625rem, 1rem + 0.28vw, 1.1875rem);
+  --text-h4: clamp(1.375rem, 1.15rem + 0.9vw, 1.75rem);
+  --text-h3: clamp(1.75rem, 1.35rem + 1.4vw, 2.375rem);
+  --text-mobile-h2: clamp(1.875rem, 1.55rem + 1.2vw, 2.5rem);
+  --text-mobile-h1: clamp(2.125rem, 1.7rem + 1.8vw, 3.25rem);
+  --text-mobile-hero: clamp(2.5rem, 1.95rem + 2.3vw, 3.75rem);
+  --text-h2: clamp(2.25rem, 1.75rem + 2vw, 3.25rem);
+  --text-h1: clamp(2.75rem, 2.05rem + 2.6vw, 4rem);
+  --text-display: clamp(3.25rem, 2.3rem + 3.8vw, 5.25rem);
+  --section-padding-y: clamp(2rem, 3.3rem + 2vw, 6rem);
+  --section-padding-x: clamp(1rem, 0.7rem + 1.4vw, 2rem);
+  --section-padding-x-sm: clamp(1.5rem, 1rem + 1.6vw, 2.5rem);
+  --section-padding-x-lg: clamp(2rem, 1.2rem + 2vw, 4rem);
+  --content-max-width: 1920px;
+  --content-inner-max-width: 1760px;
 }
 
 @theme inline {
@@ -58,6 +67,8 @@
   --color-brand-gold: var(--color-gold-400);
   --color-surface-glass: var(--surface-glass);
   --color-surface-soft: var(--color-soft-blue);
+  --color-surface-panel: var(--color-background-panel);
+  --color-surface-elevated: var(--color-background-elevated);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
@@ -98,6 +109,34 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.page-shell {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--section-padding-x);
+}
+
+.page-shell--wide {
+  max-width: var(--content-inner-max-width);
+}
+
+.section-shell {
+  padding-block: var(--section-padding-y);
+}
+
+@media (min-width: 640px) {
+  .page-shell {
+    padding-inline: var(--section-padding-x-sm);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-shell {
+    padding-inline: var(--section-padding-x-lg);
+  }
 }
 
 @keyframes scroll-indicator-float {

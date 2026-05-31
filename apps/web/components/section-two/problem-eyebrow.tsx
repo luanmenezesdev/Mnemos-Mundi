@@ -6,7 +6,7 @@ type ProblemEyebrowProps = {
 export function ProblemEyebrow({ label, className }: ProblemEyebrowProps) {
   return (
     <div className={[
-      "flex items-center gap-4",
+      "flex flex-wrap items-center gap-3 sm:gap-4",
       className,
     ].filter(Boolean).join(" ")}>
       <span
@@ -14,12 +14,12 @@ export function ProblemEyebrow({ label, className }: ProblemEyebrowProps) {
         aria-hidden="true"
       />
 
-      <p className="text-[14px] font-medium tracking-[0.32em] text-[#5bc0eb]">
+      <p className="max-w-full text-[length:var(--text-eyebrow)] font-medium tracking-[0.2em] text-[#5bc0eb] sm:tracking-[0.32em]">
         {label}
       </p>
 
       <span
-        className="h-px w-[120px] bg-gradient-to-r from-[#2ad0ff] to-transparent"
+        className="hidden h-px max-w-32 flex-1 bg-gradient-to-r from-[#2ad0ff] to-transparent sm:block"
         aria-hidden="true"
       />
     </div>
