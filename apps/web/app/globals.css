@@ -197,3 +197,42 @@ body {
     animation: none;
   }
 }
+
+.landing-page {
+  background:
+    radial-gradient(circle at top, rgba(91, 192, 235, 0.12), transparent 28%),
+    linear-gradient(180deg, #050816 0%, #07101f 38%, #081425 100%);
+}
+
+.landing-shell {
+  position: relative;
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--section-padding-x);
+}
+
+.landing-section {
+  position: relative;
+  padding-block: clamp(5rem, 8vw, 8rem);
+}
+
+.landing-panel {
+  border: 1px solid var(--border-soft);
+  background: linear-gradient(180deg, rgba(16, 22, 36, 0.88), rgba(10, 16, 30, 0.72));
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: var(--radius-xl);
+}
+
+@media (min-width: 640px) {
+  .landing-shell {
+    padding-inline: var(--section-padding-x-sm);
+  }
+}
+
+@media (min-width: 1024px) {
+  .landing-shell {
+    padding-inline: var(--section-padding-x-lg);
+  }
+}
