@@ -1,0 +1,62 @@
+<h2>HeroSection: alinhamento do conteúdo</h2>
+<p class="subtitle">As duas direções abaixo seguem o que você descreveu. A diferença principal é onde o bloco principal repousa dentro da viewport.</p>
+
+<div class="cards">
+  <div class="card" data-choice="centered" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">A. Conteúdo centralizado na tela</div>
+        <div class="mockup-body" style="min-height: 360px; background: linear-gradient(180deg, #09101d 0%, #0d1628 100%); border-radius: 18px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="height: 22px;"></div>
+          <div style="display: grid; gap: 16px; max-width: 72%; margin: 0 auto; text-align: center; justify-items: center;">
+            <div style="display: inline-flex; width: fit-content; border: 1px solid rgba(255,255,255,0.14); border-radius: 999px; padding: 8px 14px; font-size: 12px; letter-spacing: 0.04em; color: #d9e2ec;">Para escolas, cursinhos e universidades</div>
+            <div style="width: 86%; height: 88px; border-radius: 18px; background: linear-gradient(90deg, rgba(248,250,252,0.94), rgba(248,250,252,0.72));"></div>
+            <div style="width: 94%; height: 38px; border-radius: 14px; background: rgba(217,226,236,0.32);"></div>
+            <div style="display: flex; gap: 12px; justify-content: center;">
+              <div style="width: 180px; height: 48px; border-radius: 999px; background: rgba(91,192,235,0.25); border: 1px solid rgba(91,192,235,0.55);"></div>
+              <div style="width: 180px; height: 48px; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <div style="width: 28px; height: 46px; border-radius: 999px; border: 2px solid rgba(248,250,252,0.8); position: relative;">
+              <div style="position: absolute; top: 8px; left: 50%; width: 4px; height: 10px; margin-left: -2px; border-radius: 999px; background: #f8fafc;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Hero mais contemplativa</h3>
+      <p>Faz a primeira dobra parecer um frame completo. O mouse continua no centro inferior e o texto vira o foco absoluto.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="left" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">B. Conteúdo à esquerda + mouse centralizado</div>
+        <div class="mockup-body" style="min-height: 360px; background: linear-gradient(180deg, #09101d 0%, #0d1628 100%); border-radius: 18px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="height: 22px;"></div>
+          <div style="display: grid; gap: 16px; max-width: 74%;">
+            <div style="display: inline-flex; width: fit-content; border: 1px solid rgba(255,255,255,0.14); border-radius: 999px; padding: 8px 14px; font-size: 12px; letter-spacing: 0.04em; color: #d9e2ec;">Para escolas, cursinhos e universidades</div>
+            <div style="width: 82%; height: 88px; border-radius: 18px; background: linear-gradient(90deg, rgba(248,250,252,0.94), rgba(248,250,252,0.72));"></div>
+            <div style="width: 92%; height: 38px; border-radius: 14px; background: rgba(217,226,236,0.32);"></div>
+            <div style="display: flex; gap: 12px;">
+              <div style="width: 180px; height: 48px; border-radius: 999px; background: rgba(91,192,235,0.25); border: 1px solid rgba(91,192,235,0.55);"></div>
+              <div style="width: 180px; height: 48px; border-radius: 999px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14);"></div>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <div style="width: 28px; height: 46px; border-radius: 999px; border: 2px solid rgba(248,250,252,0.8); position: relative;">
+              <div style="position: absolute; top: 8px; left: 50%; width: 4px; height: 10px; margin-left: -2px; border-radius: 999px; background: #f8fafc;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Hero mais institucional</h3>
+      <p>Mantém o alinhamento lateral atual, aproveita melhor a área útil e separa o convite de scroll como um gesto independente no rodapé.</p>
+    </div>
+  </div>
+</div>

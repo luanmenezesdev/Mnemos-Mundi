@@ -180,6 +180,16 @@ body {
 
 .scroll-indicator {
   animation: scroll-indicator-float 2.8s ease-in-out infinite;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.scroll-indicator[data-scrolled="true"] {
+  opacity: 0.38;
+  transform: translate(-50%, 10px) scale(0.96);
 }
 
 .scroll-indicator__wheel {
@@ -195,6 +205,14 @@ body {
   .scroll-indicator__wheel,
   .scroll-indicator__arrow {
     animation: none;
+  }
+
+  .scroll-indicator {
+    transition: none;
+  }
+
+  .scroll-indicator[data-scrolled="true"] {
+    transform: translate(-50%, 0) scale(1);
   }
 }
 
