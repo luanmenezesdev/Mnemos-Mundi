@@ -37,12 +37,12 @@ export function ExperienceSection() {
   return (
     <section id="como-funciona" className="landing-section">
       <div className="landing-shell">
-        <div className="landing-stage justify-center gap-8 py-8 max-sm:justify-start max-sm:gap-5 max-sm:py-5 [@media(max-height:840px)]:justify-start [@media(max-height:840px)]:gap-5 [@media(max-height:840px)]:py-5">
+        <div className="landing-stage justify-center gap-8 py-8 pb-14 max-sm:justify-start max-sm:gap-5 max-sm:px-5 max-sm:py-8 max-sm:pb-14 [@media(max-height:840px)]:justify-start [@media(max-height:840px)]:gap-5 [@media(max-height:840px)]:py-5">
           <div className="max-w-[52rem] space-y-3.5 max-sm:space-y-3 [@media(max-height:840px)]:space-y-2.5">
             <p className="text-[length:var(--text-eyebrow)] tracking-[0.26em] text-[#5bc0eb]">
               A EXPERIÊNCIA
             </p>
-            <h2 className="max-w-[20ch] font-alt-heading text-[length:var(--text-mobile-section)] font-light leading-[0.95] tracking-[-0.04em] text-text-primary lg:text-[length:var(--text-section)] [@media(max-height:840px)]:text-[length:var(--text-mobile-h2)]">
+            <h2 className="max-w-[18ch] font-alt-heading text-[30px] font-light leading-[0.94] tracking-[-0.04em] text-text-primary sm:max-w-[20ch] sm:text-[length:var(--text-mobile-section)] lg:text-[length:var(--text-section)] [@media(max-height:840px)]:text-[length:var(--text-mobile-h2)]">
               Não é uma aula em 3D. É uma jornada de aprendizagem que pode ser habitada.
             </h2>
             <p className="max-w-[38rem] text-[length:var(--text-body)] leading-[1.5] text-text-secondary max-sm:text-[length:var(--text-body-sm)] max-sm:leading-[1.45] [@media(max-height:840px)]:text-[length:var(--text-body-sm)] [@media(max-height:840px)]:leading-[1.4]">
@@ -51,7 +51,7 @@ export function ExperienceSection() {
           </div>
 
           <div className="grid gap-4 [@media(max-height:840px)]:gap-3">
-            <div className="landing-panel p-4 sm:p-5 [@media(max-height:840px)]:p-3.5">
+            <div className="landing-panel mt-6 p-4 sm:mt-0 sm:p-5 [@media(max-height:840px)]:p-3.5">
               <div className="space-y-3 [@media(max-height:840px)]:space-y-2.5">
                 <div className="space-y-1.5">
                   <h3 className="text-[length:var(--text-body-sm)] uppercase tracking-[0.22em] text-text-muted">
@@ -62,9 +62,9 @@ export function ExperienceSection() {
                   </p>
                 </div>
 
-                <ol className="grid gap-2.5 [@media(max-height:840px)]:gap-2">
+                <ol className="grid gap-3 [@media(max-height:840px)]:gap-2.5">
                   {experienceSteps.map((step, index) => (
-                    <li key={step.id} className="grid grid-cols-[auto_1fr] gap-2.5 [@media(max-height:840px)]:gap-2">
+                    <li key={step.id} className="grid grid-cols-[auto_1fr] gap-3 [@media(max-height:840px)]:gap-2">
                       <div className="flex flex-col items-center">
                         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#5bc0eb]/40 bg-[#5bc0eb]/8 text-[length:var(--text-caption)] text-[#5bc0eb] sm:h-10 sm:w-10">
                           {String(index + 1).padStart(2, "0")}
@@ -88,7 +88,7 @@ export function ExperienceSection() {
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-white/8 pt-3 text-[length:var(--text-caption)] text-text-secondary sm:text-[length:var(--text-body-sm)] [@media(max-height:840px)]:pt-2.5">
+            <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-white/8 pt-3 text-[12px] text-text-secondary sm:mt-0 sm:pt-3 sm:pl-6 sm:text-[length:var(--text-body-sm)] [@media(max-height:840px)]:pt-2.5">
               <span className="uppercase tracking-[0.22em] text-text-muted">Funciona para</span>
               {institutionExamples.map((example, index) => (
                 <span key={example.id} className="inline-flex items-center gap-3">
