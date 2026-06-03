@@ -30,7 +30,7 @@ export function LoadingScreen({
         }}
       />
 
-      <div className="relative z-10 flex max-w-[32rem] flex-col items-center gap-8 px-6 text-center">
+      <div className="relative z-10 flex max-w-[34rem] flex-col items-center gap-7 px-6 text-center">
         <div className="relative">
           <div
             className="absolute inset-0 -m-6 rounded-full blur-2xl opacity-70"
@@ -48,14 +48,25 @@ export function LoadingScreen({
         </div>
 
         <div>
-          <h1 className="font-heading text-4xl font-semibold tracking-tight md:text-5xl">
+          <p className="text-[var(--text-caption)] tracking-[0.24em] text-[#5bc0eb]">
+            Portal Central
+          </p>
+          <h1 className="mt-3 font-heading text-4xl font-semibold tracking-tight md:text-5xl">
             <span className="bg-gradient-to-r from-[#5bc0eb] to-[#9d7dff] bg-clip-text text-transparent">
               Mnemos Mundi
             </span>
           </h1>
-          <p className="mt-3 text-sm text-text-muted">
-            {hasError ? "Falha ao abrir o portal" : status}
+          <p className="mt-3 text-sm leading-6 text-text-muted">
+            {hasError ? "Não foi possível abrir o portal." : "Escolha uma disciplina para começar."}
           </p>
+          {!hasError ? (
+            <p
+              aria-live="polite"
+              className="mt-2 text-[0.65rem] uppercase tracking-[0.24em] text-text-muted/70"
+            >
+              {status}
+            </p>
+          ) : null}
         </div>
 
         <div className="relative h-32 w-32">

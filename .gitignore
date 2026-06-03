@@ -109,3 +109,7 @@ InitTestScene*.unity*
 
 # Ignore Penpot designs
 mnemos-mundi.pen
+
+# Ignore .agent folder and .codex folder
+/apps/.agent/
+/apps/.codex/

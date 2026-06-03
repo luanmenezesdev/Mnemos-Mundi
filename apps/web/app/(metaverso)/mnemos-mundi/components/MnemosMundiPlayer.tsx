@@ -52,7 +52,9 @@ function suppressWindowAlert() {
 
 function loadUnityLoader() {
   if (typeof window === "undefined") {
-    return Promise.reject(new Error("Unity loader can only run in the browser."));
+    return Promise.reject(
+      new Error("Unity loader can only run in the browser."),
+    );
   }
 
   if (window.createUnityInstance) {
@@ -67,9 +69,13 @@ function loadUnityLoader() {
     const existing = document.getElementById(UNITY_LOADER_ID);
     if (existing) {
       existing.addEventListener("load", () => resolve(), { once: true });
-      existing.addEventListener("error", () => {
-        reject(new Error("Failed to load the Unity loader script."));
-      }, { once: true });
+      existing.addEventListener(
+        "error",
+        () => {
+          reject(new Error("Failed to load the Unity loader script."));
+        },
+        { once: true },
+      );
       return;
     }
 
@@ -78,7 +84,8 @@ function loadUnityLoader() {
     script.src = UNITY_LOADER_SRC;
     script.async = true;
     script.onload = () => resolve();
-    script.onerror = () => reject(new Error("Failed to load the Unity loader script."));
+    script.onerror = () =>
+      reject(new Error("Failed to load the Unity loader script."));
     document.body.appendChild(script);
   }).finally(() => {
     unityLoaderPromise = null;
@@ -162,7 +169,9 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
         );
 
         if (!instance) {
-          throw new Error("Unity loader is available but createUnityInstance was not found.");
+          throw new Error(
+            "Unity loader is available but createUnityInstance was not found.",
+          );
         }
 
         if (cancelled) {
@@ -180,7 +189,9 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
         }
 
         const message =
-          cause instanceof Error ? cause.message : "Não foi possível carregar o build do Unity.";
+          cause instanceof Error
+            ? cause.message
+            : "Não foi possível carregar o build do Unity.";
         setError(message);
       }
     };
@@ -213,104 +224,80 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
   return (
     <main
       className={[
-        "flex min-h-screen w-full flex-col items-center overflow-hidden bg-background text-foreground",
-        "bg-[radial-gradient(circle_at_50%_20%,var(--surface-blue-glass),transparent_45%),linear-gradient(180deg,var(--color-soft-blue)_0%,var(--background)_100%)]",
-        "px-4 pb-8 pt-4 sm:px-6 sm:pb-10 lg:px-8 lg:pb-12",
+        "mnemos-portal-shell relative flex min-h-screen w-full overflow-hidden bg-background text-foreground",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <header className="h-[70px] w-full max-w-[min(96vw,1280px)] rounded-[var(--radius-lg)] border border-[var(--border-soft)] bg-surface-glass shadow-[0_0_40px_var(--surface-blue-glass)] backdrop-blur-xl">
-        <div className="flex h-full w-full items-center px-4 sm:px-5">
-          <Link
-            href="/"
-            className="flex h-full min-w-0 items-center gap-4 pr-4 sm:min-w-[340px] sm:pr-8"
-          >
-            <div className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[var(--border-soft)] bg-[var(--surface-blue-glass)]">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(91,192,235,0.16),transparent_24%),radial-gradient(circle_at_82%_12%,rgba(157,125,255,0.14),transparent_28%),radial-gradient(circle_at_50%_82%,rgba(244,201,93,0.06),transparent_22%)]" />
+
+      <div className="relative z-10 flex min-h-screen w-full flex-col px-4 pb-4 pt-4 sm:px-6 lg:px-8">
+        <header className="mx-auto flex w-full max-w-[1600px] items-start justify-between gap-4">
+          <Link href="/" className="flex min-w-0 items-start gap-3">
+            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/5">
               <Image
                 src="/images/logo_oficial.png"
                 alt="Mnemos Mundi Logo"
                 fill
-                className="scale-[1.15] object-contain"
+                className="scale-110 object-contain opacity-85"
               />
             </div>
 
-            <div className="flex min-w-0 flex-col gap-0">
-              <span className="truncate text-[var(--text-eyebrow)] font-medium uppercase tracking-[0.28em] text-text-primary">
+            <div className="flex min-w-0 flex-col">
+              <span className="truncate text-[var(--text-eyebrow)] uppercase tracking-[0.28em] text-text-primary">
                 MNEMOS MUNDI
               </span>
               <span className="truncate text-[var(--text-caption)] uppercase tracking-[0.16em] text-text-muted">
-                Explore. Aprenda. Transforme
+                Portal Central
               </span>
             </div>
           </Link>
 
-          <div className="h-9 w-px shrink-0 bg-[var(--border-soft)]" />
+          <button
+            type="button"
+            aria-label="Tela cheia"
+            onClick={handleFullscreen}
+            disabled={!isReady}
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 text-[var(--text-body-sm)] text-text-secondary backdrop-blur-md transition-colors hover:border-[#5bc0eb]/40 hover:text-text-primary disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            Tela cheia
+          </button>
+        </header>
 
-          <div className="flex min-w-0 flex-1 items-center px-4 sm:px-8">
-            <p className="truncate text-sm uppercase tracking-[0.24em] text-text-muted">
-              {loadingVisible ? status : "Sessão ativa"}
-            </p>
-          </div>
+        <section className="mx-auto flex w-full max-w-[1600px] flex-1 flex-col justify-start gap-4 pt-4 sm:gap-5 sm:pt-5">
+          <div className="relative flex-1">
+            <div className="pointer-events-none absolute inset-x-[12%] top-0 h-40 bg-[radial-gradient(circle_at_50%_0%,rgba(53,214,255,.16),transparent_60%)] blur-3xl" />
+            <div className="pointer-events-none absolute inset-x-[14%] bottom-0 h-40 bg-[radial-gradient(circle_at_50%_100%,rgba(120,100,255,.14),transparent_60%)] blur-3xl" />
 
-          <div className="h-9 w-px shrink-0 bg-[var(--border-soft)]" />
-
-          <div className="flex h-full min-w-[150px] items-center justify-end gap-2 pl-3 sm:min-w-[210px] sm:gap-4 sm:pl-8">
-            <button
-              type="button"
-              aria-label="Tela cheia"
-              onClick={handleFullscreen}
-              disabled={!isReady}
-              className="flex h-10 w-10 items-center justify-center rounded-full text-text-secondary transition-colors hover:bg-[var(--surface-blue-glass)] disabled:cursor-not-allowed disabled:opacity-40"
+            <div
+              className="mnemos-portal-stage relative mx-auto min-h-[calc(100svh-144px)] w-full overflow-hidden rounded-[32px] border border-white/8 bg-[rgba(7,11,24,0.34)] shadow-[inset_0_0_80px_rgba(91,192,235,0.08),0_0_80px_rgba(91,192,235,0.14)]"
+              style={{ maxWidth: "min(1600px, 92vw)" }}
             >
-              ⛶
-            </button>
+              <canvas
+                key={loadingKey}
+                ref={canvasRef}
+                id="unity-canvas"
+                className="h-full w-full outline-none"
+                tabIndex={-1}
+              />
 
-            <button
-              type="button"
-              aria-label="Configurações"
-              className="flex h-10 w-10 items-center justify-center rounded-full text-text-secondary transition-colors hover:bg-[var(--surface-blue-glass)]"
-            >
-              ⚙️
-            </button>
-
-            <div className="relative h-12 w-12 rounded-full border border-[var(--border-glow)] bg-surface-soft shadow-[0_0_22px_var(--surface-blue-glass)]">
-              <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-[var(--surface-glass)] bg-[var(--color-mint-400)]" />
+              {!isReady ? (
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(5,8,22,0.08),rgba(5,8,22,0.48))]" />
+              ) : null}
             </div>
           </div>
-        </div>
-      </header>
+        </section>
 
-      <section className="flex w-full flex-1 items-center justify-center py-5 sm:py-6 lg:py-8">
-        <div
-          className="relative aspect-video w-full overflow-hidden rounded-[var(--radius-xl)] border border-[var(--border-glow)] bg-[var(--surface-blue-glass)] shadow-[inset_0_0_80px_var(--surface-blue-glass),0_0_45px_var(--surface-blue-glass)] backdrop-blur-[2px]"
-          style={{
-            maxWidth: "min(96vw, calc((100svh - 220px) * 16 / 9))",
-          }}
-        >
-          <canvas
-            key={loadingKey}
-            ref={canvasRef}
-            id="unity-canvas"
-            className="h-full w-full outline-none"
-            tabIndex={-1}
+        {loadingVisible ? (
+          <LoadingScreen
+            error={error}
+            onRetry={error ? handleRetry : undefined}
+            progress={progress}
+            status={status}
           />
-
-          {!isReady ? (
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(5,8,22,0.2),rgba(5,8,22,0.5))]" />
-          ) : null}
-        </div>
-      </section>
-
-      {loadingVisible ? (
-        <LoadingScreen
-          error={error}
-          onRetry={error ? handleRetry : undefined}
-          progress={progress}
-          status={status}
-        />
-      ) : null}
+        ) : null}
+      </div>
     </main>
   );
 }
