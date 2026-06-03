@@ -2,17 +2,17 @@ const audiences = [
   {
     id: "escolas",
     title: "Escolas",
-    text: "Aumentam engajamento, pertencimento e curiosidade com experiências imersivas mais memoráveis.",
+    text: "Transformam disciplinas em experiências memoráveis.",
   },
   {
     id: "cursinhos",
     title: "Cursinhos",
-    text: "Criam trilhas de revisão, prática e retenção que transformam preparação em progressão visível.",
+    text: "Transformam revisão em progressão visível.",
   },
   {
     id: "universidades",
     title: "Universidades",
-    text: "Representam competências, jornadas e identidade acadêmica em ambientes persistentes.",
+    text: "Transformam competências em identidade acadêmica persistente.",
   },
 ];
 
@@ -25,20 +25,23 @@ const comparisons = [
 
 export function InstitutionsSection() {
   return (
-    <section className="landing-section">
+    <section id="para-instituicoes" className="landing-section">
       <div className="landing-shell">
-        <div className="landing-stage landing-stage--dense max-sm:justify-start max-sm:gap-4 max-sm:py-4 [@media(max-height:840px)]:justify-start [@media(max-height:840px)]:gap-4 [@media(max-height:840px)]:py-4">
+        <div className="landing-stage landing-stage--dense justify-center gap-7 py-7 max-sm:justify-start max-sm:gap-5 max-sm:py-5 [@media(max-height:840px)]:justify-start [@media(max-height:840px)]:gap-4 [@media(max-height:840px)]:py-4">
           <div className="max-w-[52rem] space-y-4 max-sm:space-y-3 [@media(max-height:840px)]:space-y-3">
             <p className="text-[length:var(--text-eyebrow)] tracking-[0.26em] text-[#5bc0eb]">
               VALOR PARA INSTITUIÇÕES
             </p>
-            <h2 className="font-alt-heading text-[length:var(--text-mobile-h1)] font-light leading-[0.95] tracking-[-0.04em] text-text-primary lg:text-[length:var(--text-h1)] [@media(max-height:840px)]:text-[length:var(--text-mobile-h2)]">
+            <h2 className="font-alt-heading text-[length:var(--text-mobile-section)] font-light leading-[0.95] tracking-[-0.04em] text-text-primary lg:text-[length:var(--text-section)] [@media(max-height:840px)]:text-[length:var(--text-mobile-h2)]">
               Uma plataforma. Múltiplos modelos educacionais. A mesma lógica de descoberta.
             </h2>
+            <p className="max-w-[42rem] text-[length:var(--text-body)] leading-[1.5] text-text-secondary max-sm:text-[length:var(--text-body-sm)] [@media(max-height:840px)]:leading-[1.4]">
+              A mesma infraestrutura pode ser adaptada para diferentes contextos educacionais sem perder continuidade.
+            </p>
           </div>
 
           <div className="landing-panel p-3 sm:p-5 [@media(max-height:840px)]:p-3">
-            <div className="grid gap-4 md:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] md:items-start [@media(max-height:840px)]:gap-3">
+            <div className="grid gap-4 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:items-start [@media(max-height:840px)]:gap-3">
               <div className="space-y-3 [@media(max-height:840px)]:space-y-2.5">
                 <div className="space-y-1.5">
                   <h3 className="text-[length:var(--text-body-sm)] uppercase tracking-[0.18em] text-text-muted">
@@ -53,14 +56,14 @@ export function InstitutionsSection() {
                   {audiences.map((audience, index) => (
                     <article
                       key={audience.id}
-                      className={`rounded-[20px] border border-white/8 bg-white/[0.03] p-3 sm:p-4 ${
+                      className={`rounded-[20px] border border-white/8 bg-white/[0.03] p-3.5 sm:p-4 ${
                         index === audiences.length - 1 ? "col-span-2 md:col-span-1" : ""
                       }`}
                     >
-                      <h3 className="font-heading text-[length:var(--text-body-sm)] text-text-primary sm:text-[length:var(--text-body)]">
+                      <h3 className="font-heading text-[length:var(--text-body)] text-text-primary sm:text-[length:var(--text-body-lg)]">
                         {audience.title}
                       </h3>
-                      <p className="mt-1.5 text-[length:var(--text-caption)] leading-[1.4] text-text-secondary sm:text-[length:var(--text-body-sm)]">
+                      <p className="mt-1.5 text-[length:var(--text-body-sm)] leading-[1.4] text-text-secondary [@media(max-height:840px)]:text-[length:var(--text-caption)]">
                         {audience.text}
                       </p>
                     </article>
@@ -79,7 +82,7 @@ export function InstitutionsSection() {
                   {comparisons.map((comparison) => (
                     <article
                       key={comparison.id}
-                      className="rounded-[20px] border border-white/8 bg-white/[0.03] px-3 py-2.5 sm:px-4 sm:py-3"
+                      className="rounded-[20px] border border-white/8 bg-white/[0.04] px-3 py-2.5 sm:px-4 sm:py-3"
                     >
                       <div className="space-y-1.5">
                         <p className="text-[length:var(--text-caption)] uppercase tracking-[0.16em] text-text-muted">
@@ -100,6 +103,12 @@ export function InstitutionsSection() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="max-w-[34rem] pt-1 [@media(max-height:840px)]:pt-0">
+            <p className="font-alt-heading text-[length:var(--text-mobile-h2)] font-light leading-[1.02] tracking-[-0.03em] text-text-primary lg:text-[length:var(--text-h2)] [@media(max-height:840px)]:text-[length:var(--text-mobile-h2)]">
+              Uma única infraestrutura. Inúmeras jornadas possíveis.
+            </p>
           </div>
         </div>
       </div>

@@ -49,6 +49,8 @@
   --text-mobile-hero: clamp(2.5rem, 1.95rem + 2.3vw, 3.75rem);
   --text-h2: clamp(2.25rem, 1.75rem + 2vw, 3.25rem);
   --text-h1: clamp(2.75rem, 2.05rem + 2.6vw, 4rem);
+  --text-mobile-section: clamp(1.95rem, 1.58rem + 1.35vw, 2.7rem);
+  --text-section: clamp(2.35rem, 1.85rem + 2.05vw, 3.45rem);
   --text-display: clamp(3.25rem, 2.3rem + 3.8vw, 5.25rem);
   --section-padding-y: clamp(2rem, 3.3rem + 2vw, 6rem);
   --section-padding-x: clamp(1rem, 0.7rem + 1.4vw, 2rem);

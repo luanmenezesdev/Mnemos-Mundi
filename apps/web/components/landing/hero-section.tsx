@@ -56,13 +56,13 @@ export function HeroSection() {
           </header>
 
           <div className="mx-auto flex w-full max-w-[58rem] flex-1 items-center justify-center">
-            <div className="space-y-7 text-center max-sm:space-y-5 [@media(max-height:840px)]:space-y-4">
-              <div className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[length:var(--text-body-sm)] text-text-secondary sm:px-4 sm:py-2 [@media(max-height:840px)]:px-3 [@media(max-height:840px)]:py-1">
+            <div className="-translate-y-6 pt-[18vh] text-center sm:-translate-y-8 sm:pt-0 lg:-translate-y-10 [@media(max-height:840px)]:-translate-y-4">
+              <div className="mb-4 inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[length:var(--text-body-sm)] text-text-secondary sm:mb-5 sm:px-4 sm:py-2 [@media(max-height:840px)]:mb-3 [@media(max-height:840px)]:px-3 [@media(max-height:840px)]:py-1">
                 Para escolas, cursinhos e universidades
               </div>
 
-              <div className="space-y-5 max-sm:space-y-4 [@media(max-height:840px)]:space-y-3">
-                <h1 className="mx-auto max-w-[12ch] font-alt-heading text-[length:var(--text-mobile-hero)] font-light leading-[0.9] tracking-[-0.05em] text-text-primary lg:text-[length:var(--text-display)] [@media(max-height:840px)]:text-[length:var(--text-mobile-h1)]">
+              <div className="mb-6 space-y-5 max-sm:space-y-4 sm:mb-5 [@media(max-height:840px)]:mb-4 [@media(max-height:840px)]:space-y-3">
+                <h1 className="mx-auto max-w-[12ch] font-alt-heading text-[length:var(--text-mobile-hero)] font-light leading-[0.96] tracking-[-0.05em] text-text-primary lg:text-[length:var(--text-display)] lg:leading-[0.9] [@media(max-height:840px)]:text-[length:var(--text-mobile-h1)]">
                   Transformamos conhecimento em mundos exploráveis.
                 </h1>
                 <p className="mx-auto max-w-[42rem] text-[length:var(--text-body-lg)] leading-[1.55] text-text-secondary max-sm:text-[length:var(--text-body)] max-sm:leading-[1.45] [@media(max-height:840px)]:text-[length:var(--text-body)] [@media(max-height:840px)]:leading-[1.45]">
@@ -70,7 +70,7 @@ export function HeroSection() {
                 </p>
               </div>
 
-              <div className="flex flex-col justify-center gap-2 sm:flex-row sm:gap-3 [@media(max-height:840px)]:gap-2">
+              <div className="flex flex-col justify-center gap-2.5 sm:flex-row sm:gap-3 [@media(max-height:840px)]:gap-2">
                 <Link
                   href="/mnemos-mundi"
                   className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#5bc0eb] bg-[#5bc0eb14] px-5 text-[length:var(--text-body-sm)] font-semibold text-text-primary sm:min-h-14 sm:px-6 sm:text-[length:var(--text-body)] max-sm:w-full [@media(max-height:840px)]:min-h-11 [@media(max-height:840px)]:px-4 [@media(max-height:840px)]:text-[length:var(--text-caption)]"
