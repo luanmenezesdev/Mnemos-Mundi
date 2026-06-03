@@ -224,6 +224,17 @@ body {
     linear-gradient(180deg, #050816 0%, #07101f 38%, #081425 100%);
 }
 
+.mnemos-portal-shell {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(91, 192, 235, 0.16), transparent 24%),
+    radial-gradient(circle at 82% 12%, rgba(157, 125, 255, 0.14), transparent 28%),
+    linear-gradient(180deg, #050816 0%, #07101f 38%, #081425 100%);
+}
+
+.mnemos-portal-stage {
+  backdrop-filter: blur(2px);
+}
+
 .landing-shell {
   position: relative;
   width: 100%;
