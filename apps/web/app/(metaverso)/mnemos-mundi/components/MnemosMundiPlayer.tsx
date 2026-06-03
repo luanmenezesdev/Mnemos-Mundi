@@ -235,7 +235,7 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
       <div className="relative z-10 flex min-h-screen w-full flex-col px-4 pb-4 pt-4 sm:px-6 lg:px-8">
         <header className="mx-auto flex w-full max-w-[1600px] items-start justify-between gap-4">
           <Link href="/" className="flex min-w-0 items-start gap-3">
-            <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/5">
+            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/5">
               <Image
                 src="/images/logo_oficial.png"
                 alt="Mnemos Mundi Logo"
