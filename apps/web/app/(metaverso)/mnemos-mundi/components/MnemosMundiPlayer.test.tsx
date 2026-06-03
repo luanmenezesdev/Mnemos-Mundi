@@ -29,9 +29,10 @@ describe("MnemosMundiPlayer", () => {
       render(<MnemosMundiPlayer />);
 
       expect(screen.getByText("MNEMOS MUNDI")).toBeInTheDocument();
+      expect(screen.getByText("Portal Central", { selector: "span" })).toBeInTheDocument();
+      expect(screen.getByText("Portal Central", { selector: "p" })).toBeInTheDocument();
       await screen.findByText("Carregando build WebGL");
-      expect(screen.getByText("Portal Central")).toBeInTheDocument();
-      expect(screen.getByText("Escolha uma disciplina para começar")).toBeInTheDocument();
+      expect(screen.getAllByText(/Escolha uma disciplina para começar\.?/i)).toHaveLength(2);
 
       expect(screen.getByRole("button", { name: /tela cheia/i })).toBeInTheDocument();
       expect(screen.queryByRole("button", { name: /configurações/i })).not.toBeInTheDocument();

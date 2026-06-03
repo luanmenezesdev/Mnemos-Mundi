@@ -52,7 +52,9 @@ function suppressWindowAlert() {
 
 function loadUnityLoader() {
   if (typeof window === "undefined") {
-    return Promise.reject(new Error("Unity loader can only run in the browser."));
+    return Promise.reject(
+      new Error("Unity loader can only run in the browser."),
+    );
   }
 
   if (window.createUnityInstance) {
@@ -67,9 +69,13 @@ function loadUnityLoader() {
     const existing = document.getElementById(UNITY_LOADER_ID);
     if (existing) {
       existing.addEventListener("load", () => resolve(), { once: true });
-      existing.addEventListener("error", () => {
-        reject(new Error("Failed to load the Unity loader script."));
-      }, { once: true });
+      existing.addEventListener(
+        "error",
+        () => {
+          reject(new Error("Failed to load the Unity loader script."));
+        },
+        { once: true },
+      );
       return;
     }
 
@@ -78,7 +84,8 @@ function loadUnityLoader() {
     script.src = UNITY_LOADER_SRC;
     script.async = true;
     script.onload = () => resolve();
-    script.onerror = () => reject(new Error("Failed to load the Unity loader script."));
+    script.onerror = () =>
+      reject(new Error("Failed to load the Unity loader script."));
     document.body.appendChild(script);
   }).finally(() => {
     unityLoaderPromise = null;
@@ -162,7 +169,9 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
         );
 
         if (!instance) {
-          throw new Error("Unity loader is available but createUnityInstance was not found.");
+          throw new Error(
+            "Unity loader is available but createUnityInstance was not found.",
+          );
         }
 
         if (cancelled) {
@@ -180,7 +189,9 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
         }
 
         const message =
-          cause instanceof Error ? cause.message : "Não foi possível carregar o build do Unity.";
+          cause instanceof Error
+            ? cause.message
+            : "Não foi possível carregar o build do Unity.";
         setError(message);
       }
     };
@@ -223,10 +234,7 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
 
       <div className="relative z-10 flex min-h-screen w-full flex-col px-4 pb-4 pt-4 sm:px-6 lg:px-8">
         <header className="mx-auto flex w-full max-w-[1600px] items-start justify-between gap-4">
-          <Link
-            href="/"
-            className="flex min-w-0 items-start gap-3"
-          >
+          <Link href="/" className="flex min-w-0 items-start gap-3">
             <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/5">
               <Image
                 src="/images/logo_oficial.png"
@@ -258,15 +266,6 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
         </header>
 
         <section className="mx-auto flex w-full max-w-[1600px] flex-1 flex-col justify-start gap-4 pt-4 sm:gap-5 sm:pt-5">
-          {/* <div className="max-w-[32rem]">
-            <p className="text-[var(--text-caption)] uppercase tracking-[0.22em] text-[#5bc0eb]">
-              Mundo Inicial
-            </p>
-            <p className="mt-2 text-[var(--text-body-lg)] leading-[1.55] text-text-secondary">
-              Escolha uma disciplina para começar
-            </p>
-          </div> */}
-
           <div className="relative flex-1">
             <div className="pointer-events-none absolute inset-x-[12%] top-0 h-40 bg-[radial-gradient(circle_at_50%_0%,rgba(53,214,255,.16),transparent_60%)] blur-3xl" />
             <div className="pointer-events-none absolute inset-x-[14%] bottom-0 h-40 bg-[radial-gradient(circle_at_50%_100%,rgba(120,100,255,.14),transparent_60%)] blur-3xl" />
