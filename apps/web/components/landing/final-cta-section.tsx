@@ -7,8 +7,8 @@ export function FinalCtaSection() {
     <section className="landing-section overflow-hidden">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(91,192,235,0.14),transparent_24%),radial-gradient(circle_at_68%_75%,rgba(157,125,255,0.16),transparent_22%)]" />
       <div className="landing-shell">
-        <div className="landing-stage justify-center gap-7 py-7 max-sm:justify-start max-sm:gap-5 max-sm:py-5 [@media(max-height:840px)]:justify-start [@media(max-height:840px)]:gap-4 [@media(max-height:840px)]:py-4">
-          <div className="mx-auto max-w-[56rem] space-y-4 text-center max-sm:space-y-3 [@media(max-height:840px)]:space-y-3">
+        <div className="landing-stage justify-center gap-7 py-10 pb-16 max-sm:justify-start max-sm:gap-5 max-sm:py-10 max-sm:pb-16 [@media(max-height:840px)]:justify-start [@media(max-height:840px)]:gap-4 [@media(max-height:840px)]:py-4">
+          <div className="-translate-y-1 mx-auto max-w-[56rem] space-y-4 text-center sm:-translate-y-2 max-sm:space-y-3 [@media(max-height:840px)]:space-y-3">
             <p className="text-[length:var(--text-eyebrow)] tracking-[0.26em] text-[#5bc0eb]">
               TECNOLOGIA E PRÓXIMO PASSO
             </p>
@@ -35,7 +35,7 @@ export function FinalCtaSection() {
             </a>
           </div>
 
-          <div className="mx-auto flex w-full max-w-[46rem] flex-col items-center gap-3 border-t border-white/8 pt-4 text-center [@media(max-height:840px)]:gap-2.5 [@media(max-height:840px)]:pt-3">
+          <div className="mx-auto flex w-full max-w-[40rem] flex-col items-center gap-2.5 border-t border-white/8 pt-3.5 text-center sm:max-w-[46rem] [@media(max-height:840px)]:gap-2.5 [@media(max-height:840px)]:pt-3">
             <p className="text-[length:var(--text-caption)] uppercase tracking-[0.22em] text-text-muted sm:text-[length:var(--text-body-sm)]">
               Construído com
             </p>
