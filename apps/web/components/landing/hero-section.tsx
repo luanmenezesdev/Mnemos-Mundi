@@ -29,7 +29,17 @@ export function HeroSection() {
   };
 
   return (
-    <section className="landing-section overflow-hidden">
+    <section className="landing-section relative overflow-hidden">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/videos/hero-bg.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/70 to-black/100" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(91,192,235,0.16),transparent_24%),radial-gradient(circle_at_82%_12%,rgba(157,125,255,0.14),transparent_28%),radial-gradient(circle_at_50%_82%,rgba(244,201,93,0.08),transparent_22%)]" />
       <div className="landing-shell">
         <div className="landing-stage relative justify-center gap-8 py-8 max-sm:gap-6 max-sm:py-6 [@media(max-height:840px)]:gap-5 [@media(max-height:840px)]:py-5">
@@ -66,7 +76,8 @@ export function HeroSection() {
                   Transformamos conhecimento em mundos exploráveis.
                 </h1>
                 <p className="mx-auto max-w-[42rem] text-[length:var(--text-body-lg)] leading-[1.55] text-text-secondary max-sm:text-[length:var(--text-body)] max-sm:leading-[1.45] [@media(max-height:840px)]:text-[length:var(--text-body)] [@media(max-height:840px)]:leading-[1.45]">
-                  Uma nova infraestrutura para instituições criarem experiências educacionais imersivas, progressivas e memoráveis.
+                  Uma nova infraestrutura para instituições criarem experiências
+                  educacionais imersivas, progressivas e memoráveis.
                 </p>
               </div>
 
