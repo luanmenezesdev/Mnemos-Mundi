@@ -7,7 +7,14 @@ const problemPoints = [
 
 export function ProblemSection() {
   return (
-    <section className="landing-section">
+    <section className="landing-section relative">
+      <img
+        src="/images/the_problem.png"
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/100 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(91,192,235,0.16),transparent_24%),radial-gradient(circle_at_82%_12%,rgba(157,125,255,0.14),transparent_28%),radial-gradient(circle_at_50%_82%,rgba(244,201,93,0.08),transparent_22%)]" />
       <div className="landing-shell">
         <div className="landing-stage justify-center gap-5 py-5 max-sm:justify-start max-sm:gap-4 max-sm:py-4 sm:gap-8 sm:py-6 lg:gap-12 lg:py-8 [@media(max-height:840px)]:justify-start [@media(max-height:840px)]:gap-4 [@media(max-height:840px)]:py-4">
           <div className="grid items-center gap-4 xl:grid-cols-[minmax(0,1.08fr)_minmax(22rem,26rem)] sm:gap-5 xl:gap-8 [@media(max-height:840px)]:gap-4">
