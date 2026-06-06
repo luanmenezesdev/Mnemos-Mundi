@@ -14,7 +14,7 @@ const experienceSlides = [
 
     description: "Toda jornada começa com uma disciplina.",
 
-    image: "/images/experience/criar-mundo.png",
+    image: "/images/experience/criar-mundo.webp",
   },
 
   {
@@ -27,7 +27,7 @@ const experienceSlides = [
     description:
       "O conteúdo deixa de ser uma lista de arquivos. Ele passa a fazer parte do ambiente.",
 
-    image: "/images/experience/organizar-conteudos.png",
+    image: "/images/experience/organizar-conteudos.webp",
   },
 
   {
@@ -39,7 +39,7 @@ const experienceSlides = [
 
     description: "Cada aluno escolhe sua rota.",
 
-    image: "/images/experience/guiar-exploracao.png",
+    image: "/images/experience/guiar-exploracao.webp",
   },
 
   {
@@ -51,7 +51,7 @@ const experienceSlides = [
 
     description: "Aprender deixa rastros visíveis.",
 
-    image: "/images/experience/medir-progresso.png",
+    image: "/images/experience/medir-progresso.webp",
   },
 
   {
@@ -63,7 +63,7 @@ const experienceSlides = [
 
     description: "A aula termina. O conhecimento permanece.",
 
-    image: "/images/experience/manter-vivo.png",
+    image: "/images/experience/manter-vivo.webp",
   },
 ];
 
@@ -131,7 +131,7 @@ export function ExperienceSection() {
   return (
     <section id="como-funciona" className="landing-section relative">
       <img
-        src="/images/experience/experience-bg.png"
+        src="/images/experience/experience-bg.webp"
         alt=""
         className="absolute inset-0 h-full w-full object-cover"
       />
