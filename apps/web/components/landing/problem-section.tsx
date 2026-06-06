@@ -9,7 +9,7 @@ export function ProblemSection() {
   return (
     <section className="landing-section relative">
       <img
-        src="/images/the_problem.png"
+        src="/images/the_problem.webp"
         alt=""
         className="absolute inset-0 h-full w-full object-cover"
       />

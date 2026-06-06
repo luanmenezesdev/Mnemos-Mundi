@@ -237,7 +237,7 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
           <Link href="/" className="flex min-w-0 items-start gap-3">
             <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/5">
               <Image
-                src="/images/logo_oficial.png"
+                src="/images/logo_oficial.webp"
                 alt="Mnemos Mundi Logo"
                 fill
                 className="scale-110 object-contain opacity-85"

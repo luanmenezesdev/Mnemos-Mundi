@@ -8,28 +8,28 @@ const verbs = [
     icon: "01",
     content: "A aprendizagem acontece durante a aula.",
     // after: "Conhecimento vivido em ambientes exploráveis.",
-    image: "/images/classroom.png",
+    image: "/images/classroom.webp",
   },
   {
     title: "Portal",
     icon: "02",
     content: "O conhecimento deixa de ser um conteúdo e passa a ser um lugar.",
     // after: "Descobrir conexões por conta própria.",
-    image: "/images/portal.png",
+    image: "/images/portal.webp",
   },
   {
     title: "Mundo",
     icon: "03",
     content: "O aluno não assiste. Ele explora.",
     // after: "Desenhar trilhas, mundos e rituais próprios.",
-    image: "/images/world.png",
+    image: "/images/world.webp",
   },
   {
     title: "Conquistar",
     icon: "04",
     content: "Notas que desaparecem.",
     // after: "Conquistas que permanecem com o aluno.",
-    image: "/images/legacy.png",
+    image: "/images/legacy.webp",
   },
 ];
 

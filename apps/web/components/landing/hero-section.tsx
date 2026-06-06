@@ -47,7 +47,7 @@ export function HeroSection() {
             {/* <div className="flex items-center gap-4">
               <div className="relative h-10 w-10 overflow-hidden rounded-full border border-cyan-200/50 sm:h-12 sm:w-12">
                 <Image
-                  src="/images/logo_oficial.png"
+                  src="/images/logo_oficial.webp"
                   alt=""
                   fill
                   className="object-cover object-center"

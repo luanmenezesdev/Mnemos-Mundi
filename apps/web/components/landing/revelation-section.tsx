@@ -31,7 +31,7 @@ export function RevelationSection() {
   return (
     <section className="landing-section">
        <img
-        src="/images/the_revelations.png"
+        src="/images/the_revelations.webp"
         alt=""
         className="absolute inset-0 h-full w-full object-cover"
       />
