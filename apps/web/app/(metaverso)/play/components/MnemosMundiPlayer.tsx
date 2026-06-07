@@ -224,17 +224,31 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
   return (
     <main
       className={[
-        "mnemos-portal-shell relative flex min-h-screen w-full overflow-hidden bg-background text-foreground",
+        "mnemos-portal-shell relative flex min-h-screen w-full overflow-hidden bg-black text-foreground",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(91,192,235,0.16),transparent_24%),radial-gradient(circle_at_82%_12%,rgba(157,125,255,0.14),transparent_28%),radial-gradient(circle_at_50%_82%,rgba(244,201,93,0.06),transparent_22%)]" />
+      <img
+        src="/images/player-bg.webp"
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+      />
 
-      <div className="relative z-10 flex min-h-screen w-full flex-col px-4 pb-4 pt-4 sm:px-6 lg:px-8">
-        <header className="mx-auto flex w-full max-w-[1600px] items-start justify-between gap-4">
-          <Link href="/" className="flex min-w-0 items-start gap-3">
+      <div className="absolute inset-0 bg-black/62" />
+
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_38%,rgba(56,189,248,0.18),transparent_36%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_70%,rgba(120,100,255,0.12),transparent_42%)]" />
+
+      <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-black/90 via-black/45 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+      <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black/85 to-transparent" />
+      <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black/85 to-transparent" />
+
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1600px] flex-col px-4 pb-5 pt-4 sm:px-6 lg:px-8 landscape:pb-4">
+        <header className="flex w-full items-start justify-between gap-4">
+          <Link href="/" className="flex min-w-0 flex-1 items-start gap-3">
             <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10 bg-white/5">
               <Image
                 src="/images/logo_oficial.webp"
@@ -244,11 +258,11 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
               />
             </div>
 
-            <div className="flex min-w-0 flex-col">
-              <span className="truncate text-[var(--text-eyebrow)] uppercase tracking-[0.28em] text-text-primary">
+            <div className="flex min-w-0 max-w-[180px] flex-col sm:max-w-none">
+              <span className="truncate text-[var(--text-eyebrow)] uppercase tracking-[0.24em] text-text-primary sm:tracking-[0.28em]">
                 MNEMOS MUNDI
               </span>
-              <span className="truncate text-[var(--text-caption)] uppercase tracking-[0.16em] text-text-muted">
+              <span className="truncate text-[var(--text-caption)] uppercase tracking-[0.14em] text-text-muted sm:tracking-[0.16em]">
                 Portal Central
               </span>
             </div>
@@ -256,36 +270,69 @@ export function MnemosMundiPlayer({ className }: { className?: string }) {
 
           <button
             type="button"
-            aria-label="Tela cheia"
+            aria-label="Ativar modo imersivo"
             onClick={handleFullscreen}
             disabled={!isReady}
-            className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 text-[var(--text-body-sm)] text-text-secondary backdrop-blur-md transition-colors hover:border-[#5bc0eb]/40 hover:text-text-primary disabled:cursor-not-allowed disabled:opacity-40"
+            className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 px-3 text-sm text-text-secondary backdrop-blur-md transition-colors hover:border-[#5bc0eb]/40 hover:text-text-primary disabled:cursor-not-allowed disabled:opacity-40 sm:min-h-11 sm:px-4"
           >
-            Tela cheia
+            <span className="hidden sm:inline">Modo imersivo</span>
+            <span className="sm:hidden">Imersivo</span>
           </button>
         </header>
 
-        <section className="mx-auto flex w-full max-w-[1600px] flex-1 flex-col justify-start gap-4 pt-4 sm:gap-5 sm:pt-5">
-          <div className="relative flex-1">
-            <div className="pointer-events-none absolute inset-x-[12%] top-0 h-40 bg-[radial-gradient(circle_at_50%_0%,rgba(53,214,255,.16),transparent_60%)] blur-3xl" />
-            <div className="pointer-events-none absolute inset-x-[14%] bottom-0 h-40 bg-[radial-gradient(circle_at_50%_100%,rgba(120,100,255,.14),transparent_60%)] blur-3xl" />
+        <section className="flex w-full flex-1 flex-col justify-center gap-5 pt-5 sm:gap-6 sm:pt-6 landscape:pt-4">
+          <div className="flex flex-1 items-center justify-center px-3 py-8 portrait:flex landscape:hidden md:hidden">
+            <div className="mx-auto w-full max-w-[330px] rounded-[28px] border border-cyan-300/20 bg-white/[0.045] px-6 py-7 text-center shadow-[0_0_60px_rgba(91,192,235,0.12)] backdrop-blur-xl">
+              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-cyan-300/25 bg-cyan-300/10 text-2xl text-white">
+                ↻
+              </div>
+
+              <p className="mb-3 whitespace-nowrap text-[10px] uppercase tracking-[0.28em] text-[#5bc0eb]">
+                Modo paisagem
+              </p>
+
+              <h1 className="mx-auto max-w-[260px] text-2xl font-light leading-tight text-white">
+                Gire o dispositivo para acessar o Portal Central.
+              </h1>
+
+              <p className="mx-auto mt-4 max-w-[260px] text-sm leading-relaxed text-white/55">
+                A experiência WebGL foi criada para navegação horizontal, com
+                mais espaço para explorar o mundo.
+              </p>
+            </div>
+          </div>
+          <div className="relative hidden flex-1 landscape:block md:block">
+            <div className="pointer-events-none absolute inset-x-[18%] -top-10 h-48 bg-[radial-gradient(circle_at_50%_50%,rgba(53,214,255,.22),transparent_62%)] blur-3xl" />
+            <div className="pointer-events-none absolute inset-x-[12%] bottom-8 h-56 bg-[radial-gradient(circle_at_50%_100%,rgba(120,100,255,.18),transparent_62%)] blur-3xl" />
+
+            <div className="pointer-events-none absolute left-1/2 top-0 h-[68%] w-[72%] -translate-x-1/2 rounded-full border border-cyan-300/10 bg-cyan-300/[0.03] blur-sm" />
 
             <div
-              className="mnemos-portal-stage relative mx-auto min-h-[calc(100svh-144px)] w-full overflow-hidden rounded-[32px] border border-white/8 bg-[rgba(7,11,24,0.34)] shadow-[inset_0_0_80px_rgba(91,192,235,0.08),0_0_80px_rgba(91,192,235,0.14)]"
-              style={{ maxWidth: "min(1600px, 92vw)" }}
+              className="mnemos-portal-stage group relative mx-auto aspect-video w-full max-w-full overflow-hidden rounded-[20px] border border-cyan-300/20 bg-[rgba(5,8,18,0.34)] shadow-[inset_0_0_90px_rgba(91,192,235,0.10),0_0_90px_rgba(91,192,235,0.18)] backdrop-blur-xl sm:rounded-[30px]"
+              style={{
+                width: "min(100%, calc((100svh - 150px) * 16 / 9))",
+              }}
             >
+              <div className="pointer-events-none absolute inset-0 z-10 rounded-[inherit] ring-1 ring-white/10" />
+              <div className="pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(circle_at_50%_50%,transparent_55%,rgba(0,0,0,0.20)_100%)]" />
+              <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-cyan-300/70 to-transparent" />
+
               <canvas
                 key={loadingKey}
                 ref={canvasRef}
                 id="unity-canvas"
-                className="h-full w-full outline-none"
+                className="relative z-0 h-full w-full outline-none"
                 tabIndex={-1}
               />
 
               {!isReady ? (
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(5,8,22,0.08),rgba(5,8,22,0.48))]" />
+                <div className="pointer-events-none absolute inset-0 z-20 bg-[radial-gradient(circle_at_50%_50%,rgba(5,8,22,0.08),rgba(5,8,22,0.58))]" />
               ) : null}
             </div>
+
+            <p className="mt-5 text-center text-sm text-white/45">
+              Para uma experiência melhor, use o modo imersivo.
+            </p>
           </div>
         </section>
 
