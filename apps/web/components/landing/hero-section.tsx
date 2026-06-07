@@ -83,7 +83,7 @@ export function HeroSection() {
 
               <div className="flex flex-col justify-center gap-2.5 sm:flex-row sm:gap-3 [@media(max-height:840px)]:gap-2">
                 <Link
-                  href="/mnemos-mundi"
+                  href="/play"
                   className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#5bc0eb] bg-[#5bc0eb14] px-5 text-[length:var(--text-body-sm)] font-semibold text-text-primary sm:min-h-14 sm:px-6 sm:text-[length:var(--text-body)] max-sm:w-full [@media(max-height:840px)]:min-h-11 [@media(max-height:840px)]:px-4 [@media(max-height:840px)]:text-[length:var(--text-caption)]"
                 >
                   Explorar um mundo

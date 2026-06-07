@@ -33,7 +33,7 @@ export function FinalCtaSection() {
 
           <div className="mx-auto flex w-full max-w-[44rem] flex-col items-center gap-3 sm:flex-row sm:justify-center [@media(max-height:840px)]:gap-2.5">
             <Link
-              href="/mnemos-mundi"
+              href="/play"
               className="inline-flex min-h-13 w-full items-center justify-center rounded-full border border-[#5bc0eb] bg-[#5bc0eb24] px-6 text-[length:var(--text-body)] font-semibold text-text-primary shadow-[0_0_32px_rgba(91,192,235,0.16)] transition hover:bg-[#5bc0eb30] sm:min-h-14 sm:w-auto sm:min-w-[16rem]"
             >
               Explorar protótipo
