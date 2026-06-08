@@ -5,6 +5,8 @@ Mnemos Mundi - Projeto apresentado ao desafio ExpoVerse do Hackathon Web3 RESTIC
 
 ## O projeto
 
+![Prints do Projeto](/docs/print.jpg)
+
 **Mnemos Mundi** é um metaverso educacional que transforma conteúdos de aprendizagem em mundos exploráveis.
 
 A proposta é oferecer uma experiência imersiva em que o usuário navega por um ambiente 3D, acessa portais temáticos e interage com conteúdos educacionais de forma mais visual, intuitiva e memorável.
