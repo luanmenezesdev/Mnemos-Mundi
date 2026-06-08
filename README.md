@@ -1,4 +1,4 @@
-# ExpoVerse - Mnemos Mundi
+# Mnemos Mundi - ExpoVerse
 
 ## Sobre o desafio
 Mnemos Mundi - Projeto apresentado ao desafio ExpoVerse do Hackathon Web3 RESTIC 29.
@@ -84,6 +84,10 @@ Principais usos:
 - **ChatGPT e Gemini**: geração de imagens conceituais e referências visuais para o projeto.
 
 Todas as decisões finais de produto, design, implementação e apresentação foram feitas pela equipe.
+
+## Modelos 3D - Créditos
+
+[/docs/3d-models-mnemos-mundi.pdf](/docs/3d-models-mnemos-mundi.pdf)
 
 ## Equipe
 
