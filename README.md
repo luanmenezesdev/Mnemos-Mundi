@@ -1,40 +1,37 @@
-# ExpoVerse Template
+# ExpoVerse - Mnemos Mundi
 
 ## Sobre o desafio
-Template oficial do desafio ExpoVerse do Hackathon Web3 RESTIC 29.
+Mnemos Mundi - Projeto apresentado ao desafio ExpoVerse do Hackathon Web3 RESTIC 29.
 
-## Objetivo
-Construir experiências virtuais imersivas, navegáveis e interativas utilizando tecnologias XR, WebGL ou ambientes 3D.
+## O projeto
 
-## Exemplos de aplicação
-- Museu virtual
-- Loja imersiva
-- Feira virtual
-- Tour 3D
-- Galeria digital
-- Espaço educacional
-- Experiência gamificada
+**Mnemos Mundi** é um metaverso educacional que transforma conteúdos de aprendizagem em mundos exploráveis.
 
-## Tecnologias sugeridas
-- Three.js
-- React Three Fiber
-- Babylon.js
-- A-Frame
+A proposta é oferecer uma experiência imersiva em que o usuário navega por um ambiente 3D, acessa portais temáticos e interage com conteúdos educacionais de forma mais visual, intuitiva e memorável.
+
+Neste MVP, construímos um lobby virtual com quatro portais de conhecimento: **História**, **Matemática**, **Astronomia** e **Idiomas**. Os portais de História, Matemática e Idiomas aparecem como áreas em manutenção, representando a expansão futura do projeto. O portal de **Astronomia** é a experiência funcional do MVP, permitindo ao usuário entrar, explorar e interagir com o conteúdo.
+
+## Tecnologias utilizadas
+
 - Unity WebGL
 - Blender
-- WebXR
 - Next.js
-
-## Estrutura
-/src
-/public
-/assets
-/docs
-/scenes
-/models
-/textures
+- React
+- Tailwind CSS
+- Vercel
 
 ## Como executar
+
+### Pré-requisitos
+
+- Node.js
+- npm
+
+### Acessar a pasta da aplicação web
+
+```bash
+cd apps/web
+```
 
 ### Instalar dependências
 ```bash
@@ -46,12 +43,30 @@ npm install
 npm run dev
 ```
 
-## Requisitos mínimos
-- Ambiente navegável
-- Interação básica
-- Fluxo funcional
-- README funcional
-- Vídeo-pitch
+### Acessar aplicação
+
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador
+
+## Apresentação de Slides
+
+[/docs/mnemos-mundi-presentation.pdf](/docs/mnemos-mundi-presentation.pdf)
+
+## Links úteis
+
+### Vídeo Pitch
+
+[https://youtu.be/mUx1SZaMn40](https://youtu.be/mUx1SZaMn40)
+
+### Vídeo Demo
+
+[https://youtu.be/mUx1SZaMn40](https://youtu.be/mUx1SZaMn40)
+
+### Projeto em produção
+
+[https://mnemos-mundi.vercel.app](https://mnemos-mundi.vercel.app)
 
 ## Equipe
-Adicionar integrantes aqui.
+
+- Evilis Glenio Teixeira Gomes - Turma 1
+- Luan Vinícius de Aquino Menezes - Turma 5
+- Williane Isidoro da Silva - Turma 5
