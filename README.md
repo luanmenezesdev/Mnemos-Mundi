@@ -67,6 +67,24 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador
 
 [https://mnemos-mundi.vercel.app](https://mnemos-mundi.vercel.app)
 
+## Uso de Inteligência Artificial
+
+Durante o desenvolvimento do projeto, utilizamos ferramentas de Inteligência Artificial como apoio ao processo criativo, técnico e textual.
+
+As IAs foram utilizadas para acelerar tarefas, gerar alternativas, revisar materiais e apoiar decisões de implementação, sempre com curadoria, adaptação e validação da equipe.
+
+Principais usos:
+
+- **Codex e Claude Code**: apoio na implementação de partes da landing page;
+- **Codex**: apoio no controle do Blender via MCP para criação e ajuste de elementos 3D;
+- **ChatGPT**: geração de ideias, direcionamentos técnicos e apoio na organização do projeto;
+- **ChatGPT**: apoio no roteiro do pitch e na estrutura da apresentação;
+- **ChatGPT**: direção e melhoria de copy para a landing page;
+- **ChatGPT**: revisão de conteúdos textuais e sugestão de ajustes;
+- **ChatGPT e Gemini**: geração de imagens conceituais e referências visuais para o projeto.
+
+Todas as decisões finais de produto, design, implementação e apresentação foram feitas pela equipe.
+
 ## Equipe
 
 - Evilis Glenio Teixeira Gomes - Turma 1
