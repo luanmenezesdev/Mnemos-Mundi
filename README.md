@@ -49,15 +49,11 @@ npm run dev
 
 Abra [http://localhost:3000](http://localhost:3000) no seu navegador
 
-## Apresentação de Slides
-
-[/docs/mnemos-mundi-presentation.pdf](/docs/mnemos-mundi-presentation.pdf)
-
 ## Links úteis
 
 ### Vídeo Pitch
 
-[https://youtu.be/link123](https://youtu.be/link123)
+[https://youtu.be/Cp1exLUU9bM](https://youtu.be/Cp1exLUU9bM)
 
 ### Vídeo Técnico
 
@@ -66,6 +62,10 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador
 ### Projeto em produção
 
 [https://mnemos-mundi.vercel.app](https://mnemos-mundi.vercel.app)
+
+### Apresentação de Slides
+
+[/docs/mnemos-mundi-presentation.pdf](/docs/mnemos-mundi-presentation.pdf)
 
 ### Modelos 3D - Créditos
 
