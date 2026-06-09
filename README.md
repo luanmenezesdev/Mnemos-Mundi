@@ -53,7 +53,7 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador
 
 ### Vídeo Pitch
 
-[https://youtu.be/Cp1exLUU9bM](https://youtu.be/Cp1exLUU9bM)
+[https://youtu.be/TctwgR29lsQ](https://youtu.be/TctwgR29lsQ)
 
 ### Vídeo Técnico
 
