@@ -1,6 +1,7 @@
 # Mnemos Mundi - ExpoVerse
 
 ## Sobre o desafio
+
 Mnemos Mundi - Projeto apresentado ao desafio ExpoVerse do Hackathon Web3 RESTIC 29.
 
 ## O projeto
@@ -22,7 +23,35 @@ Neste MVP, construímos um lobby virtual com quatro portais de conhecimento: **H
 - Tailwind CSS
 - Vercel
 
-## Como executar
+## Estrutura relevante
+
+- Cena principal: `Assets/Scenes/Lobby.unity`
+- Cena da experiência de Astronomia: `Assets/Scenes/Astronomy.unity`
+- Aplicação web: `apps/web`
+- Documentação e materiais do projeto: `docs`
+
+## Como abrir o projeto Unity
+
+1. Abra o projeto pelo **Unity Hub**;
+2. Utilize a versão **6000.3.13f1** da Unity, ou uma versão compatível do Unity 6;
+3. Caso o Unity abra uma cena vazia/`Untitled`, carregue manualmente a cena:
+
+```txt
+Assets/Scenes/Lobby.unity
+```
+
+4. A cena `Lobby` é a cena principal do projeto;
+5. A cena `Astronomy` é acessada a partir do portal de Astronomia dentro do lobby;
+6. Para build WebGL, verifique se as cenas estão configuradas no Build Profiles/Build Settings nesta ordem:
+
+```txt
+1. Assets/Scenes/Lobby.unity
+2. Assets/Scenes/Astronomy.unity
+```
+
+A cena `Lobby` deve ficar como primeira cena, pois é o ponto de entrada da experiência.
+
+## Como executar a aplicação web
 
 ### Pré-requisitos
 
@@ -30,7 +59,6 @@ Neste MVP, construímos um lobby virtual com quatro portais de conhecimento: **H
 - npm
 
 ### Acessar a pasta da aplicação web
-
 ```bash
 cd apps/web
 ```
