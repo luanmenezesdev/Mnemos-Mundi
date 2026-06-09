@@ -55,6 +55,10 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador
 
 [https://youtu.be/TctwgR29lsQ](https://youtu.be/TctwgR29lsQ)
 
+### Vídeo Demo completo (No pitch houve cortes nesta parte)
+
+[https://youtu.be/mUx1SZaMn40](https://youtu.be/mUx1SZaMn40)
+
 ### Vídeo Técnico
 
 [https://youtu.be/BrmPe5fv5b4](https://youtu.be/BrmPe5fv5b4)
