@@ -61,7 +61,7 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador
 
 ### Vídeo Técnico
 
-[https://youtu.be/BrmPe5fv5b4](https://youtu.be/BrmPe5fv5b4)
+[https://youtu.be/rP3il8-BL54](https://youtu.be/rP3il8-BL54)
 
 ### Projeto em produção
 
