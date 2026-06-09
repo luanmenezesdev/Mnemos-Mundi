@@ -95,6 +95,6 @@ Todas as decisões finais de produto, design, implementação e apresentação f
 
 ## Equipe
 
-- Evilis Glenio Teixeira Gomes - Turma 5
+- Evilis Glenio Teixeira Gomes - Turma 1
 - Luan Vinícius de Aquino Menezes - Turma 5
 - Williane Isidoro da Silva - Turma 5
