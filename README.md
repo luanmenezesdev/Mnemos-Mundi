@@ -57,15 +57,19 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador
 
 ### Vídeo Pitch
 
-[https://youtu.be/mUx1SZaMn40](https://youtu.be/mUx1SZaMn40)
+[https://youtu.be/link123](https://youtu.be/link123)
 
-### Vídeo Demo
+### Vídeo Técnico
 
-[https://youtu.be/mUx1SZaMn40](https://youtu.be/mUx1SZaMn40)
+[https://youtu.be/BrmPe5fv5b4](https://youtu.be/BrmPe5fv5b4)
 
 ### Projeto em produção
 
 [https://mnemos-mundi.vercel.app](https://mnemos-mundi.vercel.app)
+
+### Modelos 3D - Créditos
+
+[/docs/3d-models-mnemos-mundi.pdf](/docs/3d-models-mnemos-mundi.pdf)
 
 ## Uso de Inteligência Artificial
 
@@ -85,12 +89,8 @@ Principais usos:
 
 Todas as decisões finais de produto, design, implementação e apresentação foram feitas pela equipe.
 
-## Modelos 3D - Créditos
-
-[/docs/3d-models-mnemos-mundi.pdf](/docs/3d-models-mnemos-mundi.pdf)
-
 ## Equipe
 
-- Evilis Glenio Teixeira Gomes - Turma 1
+- Evilis Glenio Teixeira Gomes - Turma 5
 - Luan Vinícius de Aquino Menezes - Turma 5
 - Williane Isidoro da Silva - Turma 5
